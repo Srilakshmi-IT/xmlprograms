@@ -1,7 +1,7 @@
 <?xml version = "1.0"?>
 <!--To Bind the DTD file-->
 <!--<!DOCTYPE Recyclers SYSTEM RecyclersDTD.dtd">-->
-<?xml-stylesheet type = "text/xsl" href = "RecyclersStyle.xsl"?>
+<?xml-stylesheet type = "text/xsl" href = "Style.xsl"?>
 <Recyclers>
 <Details id = "d1">
     <name>Divya</name>
