@@ -1,0 +1,105 @@
+<?xml version = "1.0"?>
+<!--To Bind the DTD file-->
+<!--<!DOCTYPE Recyclers SYSTEM RecyclersDTD.dtd">-->
+<?xml-stylesheet type = "text/xsl" href = "Style.xsl"?>
+<Recyclers>
+<Details id = "d1">
+    <name>Divya</name>
+    <email>divyas@gmail.com</email>
+    <phone>9718575123</phone>
+</Details>
+
+<Details id = "d2">
+<name>Raj</name>
+    <email>raj@gmail.com</email>
+    <phone>8798575123</phone>
+    <message>I will recycle daily</message>
+</Details>
+
+<Details id = "d3">
+<name>Priya</name>
+    <email>priya@gmail.com</email>
+    <phone>8121751236</phone>
+</Details>
+
+<Details id = "d4">
+<name>Ravi</name>
+    <email>ravi@gmail.com</email>
+    <phone>8123695123</phone>
+    <message>Receive thrice in a week</message>
+</Details>
+
+<Details id = "d5">
+<name>Surya</name>
+    <email>surya@gmail.com</email>
+    <phone>9671281236</phone>
+    <message>Receive weekly</message>
+</Details>
+
+<Details id = "d6">
+    <name>Aravind</name>
+    <email>aravindk@gmail.com</email>
+    <phone>6019381234</phone>
+</Details>
+
+<Details id = "d7">
+     <name>Abhi</name>
+    <email>abhi@gmail.com</email>
+    <phone>8575655123</phone>
+    
+</Details>
+
+<Details id = "d8">
+    <name>PGS Workers</name>
+    <email>pgsworkers@gmail.com</email>
+    <phone>9229041123</phone>
+</Details>
+
+<Details id = "d9">
+    <name>R2Company</name>
+    <email>r2@gmail.com</email>
+    <phone>6135490412</phone>
+    <message>weekly recycling</message>
+</Details>
+
+<Details id = "d10">
+   <name>ABC Ltd</name>
+    <email>abc@gmail.com</email>
+    <phone>9718510423</phone>
+</Details>
+
+<Details id = "d11">
+    <name>XYZ Ltd</name>
+    <email>xyz@gmail.com</email>
+    <phone>7168575123</phone>
+</Details>
+
+<Details id = "d12">
+    <name>HFDMdu</name>
+    <email>hfdmdu@gmail.com</email>
+    <phone>8578235123</phone>
+    <message>Daily recycling organization</message>
+</Details>
+
+<Details id = "d13">
+    <name>JKGroup</name>
+    <email>jk@gmail.com</email>
+    <phone>82310775123</phone>
+    <message>Daily recycling organization</message>
+</Details>
+
+<Details id = "d14">
+    <name>KKK Group</name>
+    <email>kkkgroup@gmail.com</email>
+    <phone>9978235123</phone>
+</Details>
+
+<Details id = "d15">
+    <name>NMRS Ltd</name>
+    <email>nmrs@gmail.com</email>
+    <phone>7823445123</phone>
+    <message>Daily recycling organization</message>
+</Details>
+</Recyclers>
+
+    

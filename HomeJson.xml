@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E waste recycling</title>
+</head>
+<body>
+<h1>E Waste Recycling</h1>
+<h2>Benefits</h2>
+<ul id = "demo1"></ul>
+<hr>
+<ol id = "demo2"></ol>
+<script>
+var xmlhttp = new XMLHttpRequest();
+var t1 = " ", t2 = " ";
+xmlhttp.onreadystatechange = function()
+{
+    if(this.readyState == 4 && this.status == 200)
+    {
+        var bobj = JSON.parse(this.responseText);
+        t1 + = "<li>"+ bobj.Home.Benefits.b1"+ "</li><li>" +bobj.Home.Benefits.b2+ "</li><li>"+ 
+        bobj.Home.Benefits.b3"+ "</li><li>" +bobj.Home.Benefits.b4+ "</li><li>"+
+        bobj.Home.Benefits.b5"+ "</li><li>" +bobj.Home.Benefits.b6+ "</li><li>"+
+        bobj.Home.Benefits.b7"+ "</li><li>" +bobj.Home.Benefits.b8+ "</li>";
+        document.getElementById("demo1").innerHTML = t1;
+        for(i in bobj.Home.Steps.s)
+        {
+            t2 += "<li>" + bobj.Home.Steps.s[i]+ "</li>";
+        }
+        document.getElementById("demo2").innerHTML = t2;
+
+
+    }
+};
+
+xmlhttp.open("GET","HomeJson.txt",true);
+xmlhttp.send();
+</script>
+</body>
+</html>

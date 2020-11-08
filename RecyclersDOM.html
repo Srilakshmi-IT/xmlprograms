@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Including bootstrap through the following link-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+</head>
+    </head>
+    <body style = "background-color:blanchedalmond">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="myNavbar" >
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="active">
+                       <li><a href="index.html">Home</a></li>
+                       <li class="dropdown">
+                        <a href=" "class = "dropdown-toggle" data-toggle="dropdown">XML Files</a>
+                         <ul class="dropdown-menu">
+                             <li><a href="Home.xml">XML file of Home page</a></li>
+                             <li><a href="Recyclers.xml">XML file of Recyclers Page</a></li>
+                         </ul></li>
+                       <li class="dropdown">
+                           <a href=" "class = "dropdown-toggle" data-toggle="dropdown">DTD Files</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="HomeDTD.txt">Home Page' DTD</a></li>
+                                <li><a href="RecyclersDTD.txt">Recyclers Page' DTD</a></li>
+                            </ul></li>
+                            <li class="dropdown">
+                            <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Schema Files</a>
+                            <ul class="dropdown-menu">
+                            <li><a href="HomeSchema.xsd">Schema of HomePage</a></li>
+                            <li><a href="RecyclersSchema.xsd">Schema of Recyclers page</a></li>
+                            </ul></li>
+                            <li class="dropdown">
+                                <a href=" "class = "dropdown-toggle" data-toggle="dropdown">XSL Files</a>
+                                <ul class="dropdown-menu">
+                                <li><a href="xsl1.txt">XSL Stylesheet of Home page</a></li>
+                                <li><a href="xsl2.txt">XSL Stylesheet of Recyclers page</a></li>
+                                </ul></li>
+                            <li class="dropdown">
+                                <a href=" "class = "dropdown-toggle" data-toggle="dropdown">DOM Files</a>
+                                <ul class="dropdown-menu">
+                                <li><a href="HomeDOM.html">Schema of HomePage</a></li>
+                                <li><a href="RecyclersDOM.html">Schema of Recyclers page</a></li>
+                                </ul></li>
+                            
+                            <li class="dropdown">
+                                <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Json Files</a>
+                                <ul class="dropdown-menu">
+                                <li><a href="HomeJson.txt">Json format of HomePage</a></li>
+                                <li><a href="RecyclersJson.json">Json format of Recyclers page</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Json Parse Files</a>
+                                <ul class="dropdown-menu">
+                                <li><a href="HomeJson.html">HomePage</a></li>
+                                <li><a href="RecyclersJson.html">Recyclers page</a></li>
+                                </ul>
+                            </li>
+                        </li></ul>
+                        </div>
+                    </div> </nav>
+                    <br/><br/>
+                    <div class="container" style="margin-top:30px">
+                        <div class="container" style="text-align: center;"><h1>E-WASTE RECYCLING</h1></div> 
+        <h1 style="text-align: center;">Recyclers Details</h1>
+        <hr>
+        <table border="1" id = "t1" align="center"></table>
+        <script>
+            var xm,tdata = " ",x;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function()
+            {
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    func(this);
+                }
+            };
+            xhttp.open("GET","Recyclers.xml",true);
+            xhttp.send();
+
+            function func(xml)
+            {
+                xm = xml.responseXML;
+                tdata = "<thead><tr><th>Id</th><th>Name</th><th>Email</th><th>Phone</th></tr></thead>";
+                x = xm.getElementsByTagName("Details");
+                for(i=0; i< x.length; i++)
+                {
+                    tdata += "<tr><td>" + x[i].getAttribute("id") + "</td><td>" +
+                    x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue + "</td><td>" + 
+                    x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue + "</td><td>"+
+                        x[i].getElementsByTagName("phone")[0].childNodes[0].nodeValue + "</td></tr>";
+                }
+                document.getElementById("t1").innerHTML = tdata;
+
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+{
+	"Recyclers": {
+		"Details": [
+			{
+				"name": "Divya",
+				"email": "divyas@gmail.com",
+				"phone": "9718575123",
+				"_id": "d1"
+			},
+			{
+				"name": "Raj",
+				"email": "raj@gmail.com",
+				"phone": "8798575123",
+				"message": "I will recycle daily",
+				"_id": "d2"
+			},
+			{
+				"name": "Priya",
+				"email": "priya@gmail.com",
+				"phone": "8121751236",
+				"_id": "d3"
+			},
+			{
+				"name": "Ravi",
+				"email": "ravi@gmail.com",
+				"phone": "8123695123",
+				"message": "Receive thrice in a week",
+				"_id": "d4"
+			},
+			{
+				"name": "Surya",
+				"email": "surya@gmail.com",
+				"phone": "9671281236",
+				"message": "Receive weekly",
+				"_id": "d5"
+			},
+			{
+				"name": "Aravind",
+				"email": "aravindk@gmail.com",
+				"phone": "6019381234",
+				"_id": "d6"
+			},
+			{
+				"name": "Abhi",
+				"email": "abhi@gmail.com",
+				"phone": "8575655123",
+				"_id": "d7"
+			},
+			{
+				"name": "PGS Workers",
+				"email": "pgsworkers@gmail.com",
+				"phone": "9229041123",
+				"_id": "d8"
+			},
+			{
+				"name": "R2Company",
+				"email": "r2@gmail.com",
+				"phone": "6135490412",
+				"message": "weekly recycling",
+				"_id": "d9"
+			},
+			{
+				"name": "ABC Ltd",
+				"email": "abc@gmail.com",
+				"phone": "9718510423",
+				"_id": "d10"
+			},
+			{
+				"name": "XYZ Ltd",
+				"email": "xyz@gmail.com",
+				"phone": "7168575123",
+				"_id": "d11"
+			},
+			{
+				"name": "HFDMdu",
+				"email": "hfdmdu@gmail.com",
+				"phone": "8578235123",
+				"message": "Daily recycling organization",
+				"_id": "d12"
+			},
+			{
+				"name": "JKGroup",
+				"email": "jk@gmail.com",
+				"phone": "82310775123",
+				"message": "Daily recycling organization",
+				"_id": "d13"
+			},
+			{
+				"name": "KKK Group",
+				"email": "kkkgroup@gmail.com",
+				"phone": "9978235123",
+				"_id": "d14"
+			},
+			{
+				"name": "NMRS Ltd",
+				"email": "nmrs@gmail.com",
+				"phone": "7823445123",
+				"message": "Daily recycling organization",
+				"_id": "d15"
+			}
+		]
+	}
+}

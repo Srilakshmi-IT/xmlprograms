@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E waste recycling</title>
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Including bootstrap through the following link-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>body{background-color:aquamarine;}</style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="myNavbar" >
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="dropdown">
+                    <a href=" "class = "dropdown-toggle" data-toggle="dropdown">XML Files</a>
+                     <ul class="dropdown-menu">
+                         <li><a href="Homexml.txt">XML file of Home page</a></li>
+                         <li><a href="Recyclersxml.txt">XML file of Recyclers Page</a></li>
+                     </ul></li>
+                   <li class="dropdown">
+                       <a href=" "class = "dropdown-toggle" data-toggle="dropdown">DTD Files</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="HomeDTD.txt">Home Page' DTD</a></li>
+                            <li><a href="RecyclersDTD.txt">Recyclers Page' DTD</a></li>
+                        </ul></li>
+                        <li class="dropdown">
+                        <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Schema Files</a>
+                        <ul class="dropdown-menu">
+                        <li><a href="HomeSchema.xsd">Schema of HomePage</a></li>
+                        <li><a href="RecyclersSchema.xsd">Schema of Recyclers page</a></li>
+                        </ul></li>
+                        <li class="dropdown">
+                            <a href=" "class = "dropdown-toggle" data-toggle="dropdown">XSL Files</a>
+                            <ul class="dropdown-menu">
+                            <li><a href="xsl1.txt">XSL Stylesheet of Home page</a></li>
+                            <li><a href="xsl2.txt">XSL Stylesheet of Recyclers page</a></li>
+                            </ul></li>
+                        <li class="dropdown">
+                            <a href=" "class = "dropdown-toggle" data-toggle="dropdown">DOM Files</a>
+                            <ul class="dropdown-menu">
+                            <li><a href="HomeDOM.html">Schema of HomePage</a></li>
+                            <li><a href="RecyclersDOM.html">Schema of Recyclers page</a></li>
+                            </ul></li>
+                        
+                        <li class="dropdown">
+                            <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Json Files</a>
+                            <ul class="dropdown-menu">
+                            <li><a href="HomeJson.txt">Json format of HomePage</a></li>
+                            <li><a href="RecyclersJson.json">Json format of Recyclers page</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Json Parse Files</a>
+                            <ul class="dropdown-menu">
+                            <li><a href="HomeJson.html">HomePage</a></li>
+                            <li><a href="RecyclersJson.html">Recyclers page</a></li>
+                            </ul>
+                        </li>
+                    </li></ul>
+                    </div>
+                </div> </nav>
+                <br/><br/>
+                <div class="container" style="margin-top:60px">
+                    <div class="container" style="text-align: center;"><h1>E-WASTE RECYCLING</h1></div> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+<h2 style="padding-left: 17px";>Benefits</h2>
+<ul id = "demo1"></ul></div>
+<div class="col-md-6">
+<h2 style="padding-left: 15px";>Steps</h2>
+<ol id = "demo2"></ol></div>
+<script>
+var xmlhttp = new XMLHttpRequest();
+var t1 = " ";
+var t2 = " ";
+xmlhttp.onreadystatechange = function()
+{
+    if(this.readyState == 4 && this.status == 200)
+    {
+        var bobj = JSON.parse(this.responseText);
+        t1 += "<li>"+ bobj.Home.Benefits.b1 +"</li><br/><li>" 
+        +bobj.Home.Benefits.b2+ "</li><br/><li>"+ bobj.Home.Benefits.b3 + 
+        "</li><br/><li>" +bobj.Home.Benefits.b4+ "</li><br/><li>"+bobj.Home.Benefits.b5 +
+         "</li><br/><li>" +bobj.Home.Benefits.b6+ "</li><br/><li>"+bobj.Home.Benefits.b7 + 
+         "</li><br/><li>" +bobj.Home.Benefits.b8+ "</li>";
+        document.getElementById("demo1").innerHTML = t1;
+        for(i in bobj.Home.Steps.s)
+        {
+            t2 += "<li>" + bobj.Home.Steps.s[i].name+ "</li><br/>";
+        }
+        document.getElementById("demo2").innerHTML = t2;
+
+
+    }
+};
+
+xmlhttp.open("GET","HomeJson.txt",true);
+xmlhttp.send();
+</script></div>
+</div>
+</body>
+</html>

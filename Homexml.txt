@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!--To Bind the DTD file-->
+<!--<!DOCTYPE Home SYSTEM "HomeDTD.dtd">-->
+<!--To connect with schema for XML validation-->
+<!--<xsi: noNamespaceSchemaLocation = "Home.xsd">-->
+<?xml-stylesheet type = "text/xsl" href = "sample.xsl"?>
+<Home>
+<Benefits>
+    <b1>TRACK Your E-Waste</b1>
+    <b2>TRACK Your EPR Compliance</b2>
+    <b3>ENHANCE Transparency</b3>
+    <b4>EASE-OUT Policy Compliance</b4>
+    <b5>SAVE Recurring Investment</b5>
+    <b6>SAVE Recurring Efforts</b6>
+    <b7>ENSURE End-to-End Recycling</b7>
+    <b8>GET ASSURED ON: NO Child Labour</b8>
+</Benefits>
+<Steps>
+    <s id = "1"><name>REGISTER</name></s>
+    <s id ="2"><name>FILL THE PRODUCT DETAILS</name></s>
+    <s id = "3"><name>SUBMIT PRODUCT DETAILS</name></s>
+    <s id = "4"><name>GET BEST QUOTE</name></s>
+    <s id = "5"><name>WE PAY and PICK UP</name></s>
+    <s id = "6"><name>TRANSFER TO AUTHORISED RECYCLER</name></s>
+</Steps>
+</Home>

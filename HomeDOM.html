@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E Waste Recycling</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--Including bootstrap through the following link-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      
+</head>
+    </head>
+    <body style = "background-color:blanchedalmond">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="myNavbar" >
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="active">
+                       <li><a href="index.html">Home</a></li>
+                       <li class="dropdown">
+                        <a href=" "class = "dropdown-toggle" data-toggle="dropdown">XML Files</a>
+                         <ul class="dropdown-menu">
+                             <li><a href="Home.xml">XML file of Home page</a></li>
+                             <li><a href="Recyclers.xml">XML file of Recyclers Page</a></li>
+                         </ul></li>
+                       <li class="dropdown">
+                           <a href=" "class = "dropdown-toggle" data-toggle="dropdown">DTD Files</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="HomeDTD.txt">Home Page' DTD</a></li>
+                                <li><a href="RecyclersDTD.txt">Recyclers Page' DTD</a></li>
+                            </ul></li>
+                            <li class="dropdown">
+                            <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Schema Files</a>
+                            <ul class="dropdown-menu">
+                            <li><a href="HomeSchema.xsd">Schema of HomePage</a></li>
+                            <li><a href="RecyclersSchema.xsd">Schema of Recyclers page</a></li>
+                            </ul></li>
+                            <li class="dropdown">
+                                <a href=" "class = "dropdown-toggle" data-toggle="dropdown">XSL Files</a>
+                                <ul class="dropdown-menu">
+                                <li><a href="xsl1.txt">XSL Stylesheet of Home page</a></li>
+                                <li><a href="xsl2.txt">XSL Stylesheet of Recyclers page</a></li>
+                                </ul></li>
+                            <li class="dropdown">
+                                <a href=" "class = "dropdown-toggle" data-toggle="dropdown">DOM Files</a>
+                                <ul class="dropdown-menu">
+                                <li><a href="HomeDOM.html">Schema of HomePage</a></li>
+                                <li><a href="RecyclersDOM.html">Schema of Recyclers page</a></li>
+                                </ul></li>
+                            
+                            <li class="dropdown">
+                                <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Json Files</a>
+                                <ul class="dropdown-menu">
+                                <li><a href="HomeJson.txt">Json format of HomePage</a></li>
+                                <li><a href="RecyclersJson.json">Json format of Recyclers page</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href=" "class = "dropdown-toggle" data-toggle="dropdown">Json Parse Files</a>
+                                <ul class="dropdown-menu">
+                                <li><a href="HomeJson.html">HomePage</a></li>
+                                <li><a href="RecyclersJson.html">Recyclers page</a></li>
+                                </ul>
+                            </li>
+                        </li></ul>
+                        </div>
+                    </div> </nav>
+                    <br/><br/>
+                    <div class="container" style="margin-top:60px">
+                        <div class="container" style="text-align: center;"><h1>E-WASTE RECYCLING</h1></div> 
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6">
+        <h2 style="padding-left: 15px;">Benefits</h2>
+        <ul id = "demo1"></ul></div>
+
+        <div class="col-md-6">
+        <h2 style="padding-left: 15px;">Steps</h2>
+        <ol id = "demo2"></ol></div>
+        <script>
+            var xhttp = new XMLHttpRequest();
+           
+            xhttp.onreadystatechange = function()
+            {
+                if(this.readyState == 4 && this.status == 200)
+                {
+                    func(this);
+                }
+            };
+            xhttp.open("GET","Home.xml",true);
+            xhttp.send();
+            function func(xml)
+            {
+                var data = xml.responseXML;
+                var x = " ";
+                var y = " ";
+
+                var c =data.getElementsByTagName("Benefits")[0].childElementCount;
+                var bf = data.getElementsByTagName("b1");
+                x += "<li>"+ bf[0].childNodes[0].nodeValue+"</li>"+ "<li>"+ data.getElementsByTagName("b2")[0].childNodes[0].nodeValue+"</li>"+
+                "<li>"+ data.getElementsByTagName("b3")[0].childNodes[0].nodeValue+"</li>"+
+                "<li>"+ data.getElementsByTagName("b4")[0].childNodes[0].nodeValue+"</li>"+
+                "<li>"+ data.getElementsByTagName("b5")[0].childNodes[0].nodeValue+"</li>"+
+                "<li>"+ data.getElementsByTagName("b6")[0].childNodes[0].nodeValue+"</li>"+
+                "<li>"+ data.getElementsByTagName("b7")[0].childNodes[0].nodeValue+"</li>"+
+                "<li>"+ data.getElementsByTagName("b8")[0].childNodes[0].nodeValue+"</li>";
+
+              
+                document.getElementById("demo1").innerHTML = x;
+               
+               var c2 = data.getElementsByTagName("s");
+                for(i=0;i<c2.length;i++)
+                {
+                    y += "<li>" + c2[i].getElementsByTagName("name")[0].childNodes[0].nodeValue+ "</li>";
+                }
+                document.getElementById("demo2").innerHTML = y;
+
+
+
+            }
+
+            /*text = "<Home><Benefits><b1>TRACK Your E_Waste</b1><b2>TRACK Your EPR Compliance</b2><b3>ENHANCE Transparency</b3><b4>EASE-OUT Policy Compliance</b4><b5>SAVE Recurring Investment</b5><b6>SAVE Recurring Efforts</b6><b7>ENSURE End-to-End Recycling</b7><b8>GET ASSURED ON: NO Child Labour</b8></Benefits><Steps><s id = "1"><name>REGISTER</name></s><s id ="2"><name>FILL THE PRODUCT DETAILS</name></s><s id = "3"><name>SUBMIT PRODUCT DETAILS</name></s><s id = "4"><name>GET BEST QUOTE</name></s><s id = "5"><name>WE PAY and PICK UP</name></s><s id = "6"><name>TRANSFER TO AUTHORISED RECYCLER</name></s></Steps></Home>";
+            p = new DOMParser();
+            data = p.parseFromString(text,"text/xml");
+            var x = " ";
+                var y = " ";
+                var c =data.getElementsByTagName("Benefits")[0].childElementCount;
+                var b = data.getElementsByTagName("Benefits");
+                for(i=0;i<c;i++)
+                {
+                    x += "<li>"+ b[i].childNodes[0].nodeValue + "</li>";
+                }
+                document.getElementById("demo1").innerHTML = x;
+                var c2 = data.getElementsByTagName("Steps")[0].childElementCount;
+                for(i=0;i<c2;i++)
+                {
+                    y += "<li>" + data.getElementsByTagName("s")[i].childNodes[0].nodeValue+ "</li>";
+                }
+                document.getElementById("demo2").innerHTML = y;*/
+            
+        </script>
+                            </div> </div>
+    </body>
+</html>

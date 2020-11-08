@@ -1,0 +1,42 @@
+{
+	"Home": {
+		"Benefits": {
+			"b1": "TRACK Your E-Waste",
+			"b2": "TRACK Your EPR Compliance",
+			"b3": "ENHANCE Transparency",
+			"b4": "EASE-OUT Policy Compliance",
+			"b5": "SAVE Recurring Investment",
+			"b6": "SAVE Recurring Efforts",
+			"b7": "ENSURE End-to-End Recycling",
+			"b8": "GET ASSURED ON: NO Child Labour"
+		},
+		"Steps": {
+			"s": [
+				{
+					"name": "REGISTER",
+					"_id": "1"
+				},
+				{
+					"name": "FILL THE PRODUCT DETAILS",
+					"_id": "2"
+				},
+				{
+					"name": "SUBMIT PRODUCT DETAILS",
+					"_id": "3"
+				},
+				{
+					"name": "GET BEST QUOTE",
+					"_id": "4"
+				},
+				{
+					"name": "WE PAY and PICK UP",
+					"_id": "5"
+				},
+				{
+					"name": "TRANSFER TO AUTHORISED RECYCLER",
+					"_id": "6"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding = "UTF-8"?>
+<!ELEMENT Home(Benefits,Steps)>
+<!ELEMENT Benefits(b1,b2,b3,b4,b5,b6,b7,b8)>
+<!ELEMENT b1(#PCDATA)>
+<!ELEMENT b2(#PCDATA)>
+<!ELEMENT b3(#PCDATA)>
+<!ELEMENT b4(#PCDATA)>
+<!ELEMENT b5(#PCDATA)>
+<!ELEMENT b6(#PCDATA)>
+<!ELEMENT b7(#PCDATA)>
+<!ELEMENT b8(#PCDATA)>
+<!ELEMENT Steps(s+)>
+<!ELEMENT s(name)>
+<!ELEMENT name(#PCDATA)>
+<!ATTLIST s id ID #REQUIRED>
