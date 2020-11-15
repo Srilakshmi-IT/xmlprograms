@@ -1,0 +1,8 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!ELEMENT Recyclers(Details+)>
+<!ELEMENT Details(name,email,phone,message)>
+<!ELEMENT name(#PCDATA)>
+<!ELEMENT email(#PCDATA)>
+<!ELEMENT phone(#PCDATA)>
+<!ELEMENT message(#PCDATA)>
+<!ATTLIST Details id ID #REQUIRED>
